@@ -4,21 +4,36 @@ public class MoodAnalyser {
     String message;
     public MoodAnalyser(String message) {
         this.message = message;
+
     }
 
-    public String  analyser(String msg)
+
+    public String analyser(String msg)
     {
-        if(msg.equals("i am in happy mood"))
+        try
         {
-            System.out.println("happy");
-            return "happy";
+            if(msg.equals("i am in happy mood"))
+            {
+                System.out.println("happy");
+                return "happy";
+            }
+            else if(msg.equals("i am in sad mood"))
+            {
+                System.out.println("sad");
+                return "sad";
+            }
+            else if(msg.equals(null))
+            {
+                System.out.println("happy");
+                return "happy";
+            }
+            else
+                return "Invalid message";
         }
-        else if(msg.equals("i am in sad mood"))
+        catch (NullPointerException e)
         {
-            System.out.println("sad");
-            return "sad";
+            System.out.println(e);
         }
-        else
-            return "Invalid message";
+        return "happy";
     }
 }

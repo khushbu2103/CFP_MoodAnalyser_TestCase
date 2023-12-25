@@ -17,4 +17,11 @@ public class MoodAnalyser_TestCase {
         String actual = ob.analyser("i am in sad mood");
         Assert.assertEquals("sad", actual );
     }
+    @Test
+    public void Get_Null_Message()
+    {
+        MoodAnalyser ob = new MoodAnalyser(null);
+        String actual = ob.analyser(null);
+        Assert.assertEquals("happy", actual );
+    }
 }
