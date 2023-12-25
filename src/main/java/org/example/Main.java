@@ -5,7 +5,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world");
-        MoodAnalyser moodAnalyser = new MoodAnalyser();
+        MoodAnalyser moodAnalyser = new MoodAnalyser("happy");
         moodAnalyser.analyser("happy");
     }
 }

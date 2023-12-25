@@ -1,6 +1,11 @@
 package org.example;
 
 public class MoodAnalyser {
+    String message;
+    public MoodAnalyser(String message) {
+        this.message = message;
+    }
+
     public String  analyser(String msg)
     {
         if(msg.equals("i am in happy mood"))
